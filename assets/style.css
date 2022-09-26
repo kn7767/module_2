@@ -1,7 +1,10 @@
 :root {
-    --basecolor: blue;
-    --card: rgb(182, 182, 207);
+    --basecolor: #4CC8C8;
+    --card: linear-gradient(to right, #B3BFBF , #dceaea);
     --font: "Arial";
+    --textcolor: #212626;
+    --nav: #e3ebeb;
+    --border: #8A9494;
 }
 html{
     scroll-behavior: smooth;
@@ -11,18 +14,25 @@ body {
 }
 
 .intro {
-    background-color: rgb(148, 148, 102);
+    background-image: linear-gradient(to right, #475e5e , #dceaea);
     margin: -10px;
-    padding: 60px 0px 30px 20px;
+    padding: 60px 0px 200px 20px;
     font-family: var(--font);
     font-size: 36px;
+    color: var(--textcolor);
 }
 .intro > img {
     float: right;
     margin-right: 10px;
+    border: 1px solid;
+    border-radius: 45%;
+    border-color: var(--border);
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 .navbar {
-    background-color: white;
+    background-color: var(--nav);
     margin: -10px;
     padding: 10px;
     text-align: right;
@@ -37,32 +47,69 @@ body {
     padding: 10px;
     font-family: var(--font);
     text-decoration: none;
+    color: var(--textcolor);
+    background-color: var(--nav);
+    ;
 }
 .aboutme {
     margin-top: 20px;
-    background-color: var(--card);
+    background-image: var(--card);
     border: 1px solid;
+    border-radius: 5%;
     padding-left: 10px;
     font-family: var(--font);
 }
 .sec1 {
-    background-color: var(--card);
+    background-image: var(--card);
     border: 1px solid;
+    border-radius: 5%;
+    border-color: var(--border);
     margin-top:20px;
     padding-left: 10px;
     font-family: var(--font);
+    text-align: center;
 }
-.sec2 {
+
+.ex1 {
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto;
+    width: 1200px;
+    height: 200px; 
+    object-fit: cover;
+    object-position: top;
+}
+.ex1:hover {
+    height: 400px;
+    transition: 1.5s;
+}
+#sec2 {
     display: flex;
     flex-wrap: wrap;
     font-family: var(--font);
 }
 .otherworkcard {
-    background-color: var(--card);
+    background-image: var(--card);
     border: 1px solid;
+    border-radius: 5%;
     margin: 20px 10px 0 10px;
     padding-left: 10px;
     flex: 1 0 200px;
+    color: var(--textcolor);
+    text-align: center;
+}
+.otherex {
+    border-radius: 10%;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 100px; 
+    object-fit: cover;
+    object-position: top;
+}
+.otherex:hover {
+    height: 200px;
+    transition: 1.5s;
 }
 
 .box {
@@ -73,9 +120,13 @@ body {
     background-color: orange;
 }
 
+footer {
+    margin-bottom: -15px;
+}
 #contact {
-    background-color: var(--card);
+    background-image: var(--card);
     margin-top: 20px;
+    color: var(--textcolor);
 }
 #contact > h3 {
     font-family: var(--font);
@@ -84,6 +135,7 @@ body {
 #contact > ul > li {
     list-style-type: none;
     padding-bottom: 10px;
+    font-family: var(--font);
 }
 #email::before {
     content: "📧";
@@ -110,9 +162,22 @@ body {
     .intro > img {
         padding-top: 10px;
     }
+    .ex1 {
+        border-radius: 10%;
+        display: block;
+        margin: 0 auto;
+        width:600px;
+        height: 100px; 
+        object-fit: cover;
+        object-position: top;
+    }
+    .ex1:hover {
+        height: 200px;
+        transition: 1.5s;
+    }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
     .sec2 {
         flex-direction: column;
     }
@@ -131,5 +196,18 @@ body {
     }
     .intro > img {
         padding-top: 10px;
+    }
+    .ex1 {
+        border-radius: 10%;
+        display: block;
+        margin: 0 auto;
+        width:400px;
+        height: 100px; 
+        object-fit: cover;
+        object-position: top;
+    }
+    .ex1:hover {
+        height: 200px;
+        transition: 1.5s;
     }
 }
