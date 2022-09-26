@@ -1,0 +1,135 @@
+:root {
+    --basecolor: blue;
+    --card: rgb(182, 182, 207);
+    --font: "Arial";
+}
+html{
+    scroll-behavior: smooth;
+  }
+body {
+    background-color: #2B3232;
+}
+
+.intro {
+    background-color: rgb(148, 148, 102);
+    margin: -10px;
+    padding: 60px 0px 30px 20px;
+    font-family: var(--font);
+    font-size: 36px;
+}
+.intro > img {
+    float: right;
+    margin-right: 10px;
+}
+.navbar {
+    background-color: white;
+    margin: -10px;
+    padding: 10px;
+    text-align: right;
+    border-top: 2px solid blanchedalmond;
+}
+.navbar > a {
+    border-radius: 5%;
+    list-style-type: none;
+    display: inline;
+    text-align: right;
+    margin: 5px;
+    padding: 10px;
+    font-family: var(--font);
+    text-decoration: none;
+}
+.aboutme {
+    margin-top: 20px;
+    background-color: var(--card);
+    border: 1px solid;
+    padding-left: 10px;
+    font-family: var(--font);
+}
+.sec1 {
+    background-color: var(--card);
+    border: 1px solid;
+    margin-top:20px;
+    padding-left: 10px;
+    font-family: var(--font);
+}
+.sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font);
+}
+.otherworkcard {
+    background-color: var(--card);
+    border: 1px solid;
+    margin: 20px 10px 0 10px;
+    padding-left: 10px;
+    flex: 1 0 200px;
+}
+
+.box {
+    background-color:white;
+    padding: 5px;
+}
+.box:hover {
+    background-color: orange;
+}
+
+#contact {
+    background-color: var(--card);
+    margin-top: 20px;
+}
+#contact > h3 {
+    font-family: var(--font);
+    padding: 10px 10px 5px 10px;
+}
+#contact > ul > li {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+#email::before {
+    content: "📧";
+}
+#phone::before {
+    content:"📞";
+}
+
+@media screen and (max-width: 768px) {
+    .sec2 {
+        flex-direction: column;
+    }
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        justify-content: space-around;
+    }
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro > img {
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sec2 {
+        flex-direction: column;
+    }
+    .navbar {
+        background-color: white;
+        position: fixed;
+        justify-content: space-around;
+        bottom:0;
+    }
+    .intro {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        font-size: 25px;
+    }
+    .intro > img {
+        padding-top: 10px;
+    }
+}
